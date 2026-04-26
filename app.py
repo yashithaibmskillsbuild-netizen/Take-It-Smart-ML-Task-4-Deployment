@@ -5,7 +5,7 @@ from PIL import Image
 import gdown
 import os
 
-url = "https://drive.google.com/file/d/1Q8Eb24NQN53reQxOlONZwp3sFXoGlp0F/view?usp=drive_link"
+url = "https://drive.google.com/file/d/1Q8Eb24NQN53reQxOlONZwp3sFXoGlp0F/view?usp=sharing"
 model_path = "model.keras"
 
 if not os.path.exists(model_path):
