@@ -2,8 +2,16 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+import gdown
+import os
 
-model = tf.keras.models.load_model("model.keras")
+url = "https://drive.google.com/file/d/1Q8Eb24NQN53reQxOlONZwp3sFXoGlp0F/view?usp=drive_link"
+model_path = "model.keras"
+
+if not os.path.exists(model_path):
+    gdown.download(url, model_path, quiet=False)
+
+model = tf.keras.models.load_model(model_path)
 
 class_names = ["Early Blight", "Late Blight", "Healthy"]
 
